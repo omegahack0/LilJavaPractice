@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.LinkedList;
 
 public class FindingPrimeTest {
+    Startup startupClass = new Startup();
 
     @Test
     public void testFindingFactorsCorrectForSix(){
@@ -16,7 +17,7 @@ public class FindingPrimeTest {
         factorsOfSix.add(6);
 
         //mock the function call
-        LinkedList<Integer> result = main.findFactors(6);
+        LinkedList<Integer> result = startupClass.findFactors(6);
 
         // Verify we are getting the correct values
         Assert.assertEquals(factorsOfSix, result);
@@ -33,7 +34,7 @@ public class FindingPrimeTest {
         oddNumbers.add(9);
 
         //mock the function call
-        LinkedList<Integer> result = main.findOddNumber(5);
+        LinkedList<Integer> result = startupClass.findOddNumber(5);
 
         // Verify we are getting expected values
         Assert.assertEquals(oddNumbers, result);
@@ -50,7 +51,7 @@ public class FindingPrimeTest {
         primeNumbers.add(7);
 
         //mock the function call
-        LinkedList<Integer> result = main.findPrimeDigit(5);
+        LinkedList<Integer> result = startupClass.findPrimeDigit(5);
 
         // Verify we are getting expected values
         Assert.assertEquals(primeNumbers, result);
@@ -66,7 +67,7 @@ public class FindingPrimeTest {
         perfectNumbers.add(8128);
 
         //mock the function call
-        LinkedList<Integer> result = main.findPerfectNumber(4);
+        LinkedList<Integer> result = startupClass.findPerfectNumber(4);
 
         // Verify we are getting expected values
         Assert.assertEquals(result, perfectNumbers);
@@ -82,7 +83,7 @@ public class FindingPrimeTest {
         perfectNumberFactors.add(6);
 
         //mock the function call
-        boolean result = main.isPerfect(perfectNumberFactors,6);
+        boolean result = startupClass.isPerfect(perfectNumberFactors,6);
 
         // Verify we are getting expected values
         Assert.assertTrue(result);
@@ -102,7 +103,7 @@ public class FindingPrimeTest {
         perfectNumberFactors.add(24);
 
         //mock the function call
-        boolean result = main.isPerfect(perfectNumberFactors,24);
+        boolean result = startupClass.isPerfect(perfectNumberFactors,24);
 
         // Verify we are getting expected values
         Assert.assertFalse(result);
@@ -110,7 +111,7 @@ public class FindingPrimeTest {
 
     @Test
     public void testFindKaprikarsConstant(){
-        Assert.assertEquals(6174,main.findKapricoreConstant(1234));
+        Assert.assertEquals(6174, startupClass.findKapricoreConstant(1234));
     }
 
 
